@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 20px;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: #777777;
+    line-height: 1.7;
+}
+
+.header{
+    background-image: linear-gradient(to right bottom, hsla(111, 55%, 64%, 0.80),hsla(160, 64%, 43%, 0.80)), url(../img/hero.jpg);
+    background-position: top;
+    height: 90vh;
+    padding: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    position: relative;
+    background-size: cover;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo{
+    height: 40px;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.heading-text{
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.heading-main{
+    display: block;
+    letter-spacing: 35px;
+    font-size: 60px;
+    font-weight: 700;
+    animation: lefttoright 0.7s ease-in ;
+}
+
+.heading-primary{
+    display: block;
+    letter-spacing: 17.3px;
+    font-size: 20px;
+    font-weight: 400;
+    
+    animation-name: righttoleft;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+}
+
+.btn:visited,
+.btn:link{
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    align-content: center;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+   transform: translateY(-3px);
+   box-shadow: 0px 4px 20px 0px #00000091;
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 2px 20px 0px #00000091;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn:hover::after{
+transform: scale(1.2);
+}
+
+.btn-white{
+    font-weight: 400;
+    background-color: #fff;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    color:#777777;
+    animation: totop 0.7s ease-in;
+    animation-delay: 0.7s;
+    animation-fill-mode: backwards;
+}
+
+.btn-white::after{
+    border-radius: 50px;
+    background-color: #fff;
+    /* opacity: 0; */
+}
+
+.btn-white:hover::after{
+    opacity: 0;
+}
+
+
+@keyframes lefttoright{
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes righttoleft{
+    0%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes totop{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
