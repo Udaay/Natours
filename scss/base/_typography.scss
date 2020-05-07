@@ -1,0 +1,62 @@
+body{
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  color: $dark-grey;
+  line-height: 1.7;
+}
+
+.heading-text{
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+
+  &_main{
+    display: block;
+    letter-spacing: 35px;
+    font-size: 60px;
+    font-weight: 700;
+    animation: lefttoright 0.7s ease-in ;
+  }
+  
+  &_primary{
+    display: block;
+    letter-spacing: 17.3px;
+    font-size: 20px;
+    font-weight: 400;
+    animation-name: righttoleft;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+  }
+
+}
+
+.section-intro{
+  h2{
+    background-image: linear-gradient(to right, rgba($light-green,0.9), rgba($dark-green,0.78) );
+    display: inline-block;
+    font-weight: 700;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    &:hover{
+      transform: skewX(10deg) skewY(-5deg);
+    }
+  }
+}
+
+.sub_heading{
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.paragraph{
+  font-weight: 400;
+  font-size: 1.6rem;
+  &:not(:last-child){
+    margin-bottom: 3rem;
+  }
+}
